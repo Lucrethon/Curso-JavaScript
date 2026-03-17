@@ -1,0 +1,9 @@
+body {
+    font-family: sans-serif;
+    color: #222
+}
+
+.grande {
+    font-size: 3rem;
+    color: tomato;
+}

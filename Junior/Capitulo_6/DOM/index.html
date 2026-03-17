@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="DOM.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h1 class="titulo" title="titulo principal">DOM</h1>
+    <!-- la equiqueta h1 es un nodo element, pero el contenido de la etiqueta es un text node -->
+
+    <div id = "contenido">
+        <p id = "parrafo">Este es un parrafo</p>
+        <p>Este es otro parrafo</p>
+
+        <p class = "texto">Este es otro parrafo</p> <br>
+        
+
+    </div>
+
+    <div class = "formulario">
+
+        <input type="range" class = "rango" id="rango"> 
+        <label for="rango">Rango</label>
+        <br> <br>
+
+    </div>
+
+        <div class = "formulario">
+        <input type="text" class = "input-texto"> <br> <br>
+        <label>Texto</label>
+    </div>
+
+
+
+    <div class = "formulario">
+        <input type="file" class = "input-file"> <br> <br>
+        <label>Archivo</label>
+    </div>
+
+    <br> <br>
+
+    <form id="formulario">
+        <input type="text" class="nombre" placeholder="Nombre">
+        <input type="submit" value="Enviar">
+
+        <!-- cuando tu colocas un input dentro de un formulario, al presionar el boton "enviar" la pagina se recarga porque se esta enviando los datos del formulario. Si esta afuera del formulario, no se recarga la pagina
+        
+        pero si tu quieres evitar que la pagina se recargue, puedes usar el evento "submit" del formulario y evitar el comportamiento por defecto del evento, con el metodo preventDefault(). -->
+    </form>
+    <br> <br>
+
+    <input type="submit" value="Enviar" form="formulario">
+    <!-- al colocar el atributo form en un input, le estas diciendo que ese input pertenece a ese formulario, aunque no este dentro del formulario. Esto es muy util para colocar los botones de envio fuera del formulario, o para colocar los inputs fuera del formulario y evitar que la pagina se recargue al enviar el formulario. -->
+
+    <br> <br>
+
+
+
+<script src="DOM.js"></script>
+</body>
+</html>

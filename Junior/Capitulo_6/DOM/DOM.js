@@ -15,12 +15,8 @@
 // Comentarios y otros: los comentarios y otros elementos como las declaraciones doctype en cabecera de los documentos HTML generan nodos.
 
 
-//------------------------------------------
-
-//Document - Metodos de Selección de elementos 
+//----------------------  Document - Metodos de Selección de elementos ---------------------
 //se aplican al objeto document 
-
-
 
 // document.getElementById() - Selecciona un elemento por ID
 
@@ -70,10 +66,8 @@ document.writeln(parrafos);
 document.writeln("<br>");
 
 
-//-------------------------------------------
 
-
-// Métodos para Definir, Obtener y Eliminar atributos.
+//---------------------  Métodos para Definir, Obtener y Eliminar atributos -------------------------
 
 
 const rango = document.querySelector(".rango"); // selecciona el elemento con la clase "rango" y lo asigna a la variable rango
@@ -149,10 +143,9 @@ titulo.setAttribute("title", "titulo normal"); // establece el atributo "title" 
 
 
 
-//------------------------------------------
 
+//----------------------- Atributos de Inputs -------------------------
 
-// Atributos de Inputs
 
 const input = document.querySelector(".input-texto"); // selecciona el elemento con la clase "input-texto" y lo asigna a la variable input
 
@@ -204,12 +197,18 @@ input1.placeholder = "Escribe tu nombre"; // establece el valor del atributo "pl
 input1.required = true; // establece el valor del atributo "required" del elemento con la clase "nombre" a true, lo que hace que el input sea obligatorio para enviar el formulario
 
 
-// Atributo style - Contiene declaraciones de estilo CSS para ser aplicadas al elemento.
+
+
+
+// ------------- Atributo style - Contiene declaraciones de estilo CSS para ser aplicadas al elemento ------------
 // usos y ejemplos
 
 titulo.style.color = "red"; // establece el color del texto del elemento con la clase "titulo" a rojo
 titulo.style.fontSize = "44px";
 titulo.style.padding = "20px"; // funciona porque padding es una propiedad de estil
+
+
+
 
 
 

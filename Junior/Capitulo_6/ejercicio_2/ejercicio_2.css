@@ -1,0 +1,81 @@
+@import url("fonts.css");
+
+body {
+	overflow-x: hidden;
+    font-family: "Eleonora";
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    padding: 12px;
+    font-size: 3em;
+    letter-spacing: 1.5px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Usamos gap en lugar de margin para separar las cartas */
+    max-width: 85vw;
+    margin: 0 auto;
+    color: #333;
+}
+
+.card-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #333;
+    padding: 20px;
+    width: 280px;      /* Ancho fijo para todas */
+    height: 450px;     /* ALTO FIJO para que todas las cartas midan lo mismo */
+    box-sizing: border-box;
+}
+
+.card-product:hover {
+	border-color: #71a154;
+	box-shadow: 0px 0px 30px #317124
+}
+
+
+.product-image {
+    width: 100%;       /* Ocupa todo el ancho de la carta */
+    height: 200px;     /* ALTO FIJO para la imagen. Esto alinea el texto abajo */
+    object-fit: contain; /* Muestra el producto completo sin cortarlo */
+    margin-bottom: 15px;
+    flex-shrink: 0;    /* Evita que la imagen se aplaste si hay mucho texto */
+}
+
+
+.product-name-h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    color: #333;
+}
+
+/* Si tienes un nombre o descripción, esto ayuda a empujar el botón al fondo */
+h3, p {
+    text-align: center;
+    margin: 5px 0;
+    letter-spacing: 1px;
+    color: #71a154;
+}
+
+.buy-button {
+    background: #71a154;
+    margin: 5px;
+    color: #fff;
+    border: none;
+    padding: 12px 36px;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.buy-button:focus {
+	border-color: #71a154;
+	box-shadow: 0px 0px 30px #317124
+}

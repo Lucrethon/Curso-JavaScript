@@ -1,0 +1,22 @@
+body {
+    color: #222;
+    font-family: sans-serif;
+}
+
+div {
+    background-color: #222;
+    padding: 20px;
+}
+
+h2 {
+    color: #bada55;
+}
+
+p {
+    color: #bada55;
+}
+
+div:hoover {
+    background-color: rgb(182, 25, 25);
+
+}

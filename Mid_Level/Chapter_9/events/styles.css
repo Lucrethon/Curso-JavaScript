@@ -1,0 +1,49 @@
+.contenedor {
+    padding: 30px;
+    background-color: aquamarine;
+    margin: 20px;
+}
+
+.contenedor1 {
+    padding: 30px;
+    background-color:coral;
+    margin: 20px;
+
+}
+
+.contenedor2 {
+    padding: 20px;
+    background-color:darkgrey;
+
+}
+
+.mouseover {
+    margin: 20px;
+    padding: 30px;
+    background-color: darkorange;
+}
+
+.mouseout {
+    margin: 20px;
+    padding: 30px;
+    background-color:palevioletred;
+}
+
+.contenedor-prueba {
+    margin: 20px;
+    padding: 30px;
+    background-color:violet;
+}
+
+.iput-prueba {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.contenedor-prueba1 {
+    margin: 20px;
+    padding: 30px;
+    background-color:rebeccapurple;
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #d2cadd;
+    background: #1c0031;
+}
+
+h2{
+    text-align: center;
+    padding: 12px;
+    font-size: 1.7em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+}
+
+form {
+    background: transparent;
+    padding: 20px 0;
+    padding-top: 10px;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 40px;
+    box-shadow: 0 0 15px 0 #d2cadd55;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.form_input {
+    padding: 6px 20px;
+}
+
+input {
+    width: 100%;
+    font-family: "Trajan_Pro";
+    box-sizing: border-box;
+    padding: 6px 12px;
+    border: none;
+    border: 1px solid #a797bb;
+    border-radius: 5px;
+    border-top: #a797bb solid 2px;
+    box-shadow: 0 0 15px #010002;
+    background-color: transparent;
+    color: #d2cadd;
+    margin: auto;
+    display: block; 
+    transition: color 0.3s, background-color 0.3s;
+
+}
+
+
+label{
+    font-size: 0.7em;
+    line-height: 2em;
+}
+
+
+.form_submit{
+    margin-top: 20px;
+    width: 50%;
+}
+
+#submit:hover {
+    background-color:mediumpurple;
+    color: #010002;
+}
+
+input:hover {
+    background-color:mediumpurple;
+    color: #010002;
+}
+
+input:hover::placeholder {
+    color:#010002;
+}
+
+.resultado {
+    margin-top: 20px;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+}

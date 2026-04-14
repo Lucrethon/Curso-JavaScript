@@ -1,0 +1,16 @@
+.resultado {
+    display: inline-block;
+    width: 80%;
+    align-self: center;
+
+}
+
+.edad {
+    font-size: 1.5rem;
+    color: red;
+}
+
+.nombre {
+    font-size: 1.5rem;
+    color: black;
+}

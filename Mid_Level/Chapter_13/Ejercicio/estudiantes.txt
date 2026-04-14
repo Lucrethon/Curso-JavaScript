@@ -1,0 +1,4 @@
+{
+    "aprobados" : 500,
+    "reprobados" : 120
+}

@@ -245,3 +245,170 @@ carrito.add("manzana");
 console.log(carrito.watch());
 carrito.clean();
 console.log(carrito.watch());
+
+// ------------------ Parámetro por defecto ---------------
+
+const sumar = (a=0, b=0)=> { //los parametros por defecto son los que definimos por defecto cuando no se pasa ningun valor para ese parametro 
+    console.log(a+b);
+};
+
+sumar(16 + 5
+);
+
+// ----------------- Parametros Rest ---------------
+
+//generalmente no se pueden utilizar mas parametros de los indicados en una funcion 
+//con el parametro rest podriamos hacerlo 
+//el parametro rest se esribe : "...nombreParametro"
+//este devuelve un array 
+
+const sumarRest = (frase, ...num) => {
+    //como num es un array, tenemos que hacer la operacion de otra forma 
+    let resultado = 0; //cuando se declara una variable sin inicializarla, el valor por defecto es undefined 
+    for (let i = 0; i < num.length; i++) {
+        resultado += num[i];
+    }; 
+    console.log(`${resultado} + ${frase}`)
+}; 
+//rest siempre es el ultimo parametro de todos porque se asume que va a tener una serie indefinida de objetos
+
+sumarRest("juan", 12,15,13,4);
+
+//---------------Destructuracion -----------------------
+//permite "desempacar" valores de arreglos o propiedades de objetos en variables distintas de una manera mucho más limpia y legible.
+
+// en objetos 
+
+let usuario = {
+    nombre : "Lucas",
+    apellido : "Dalto", 
+    edad : 27,
+}; 
+
+//forma tradicional de acceder a un elemento 
+let nombreObjeto = usuario.nombre
+
+//con destructuracion 
+const {nombre, edad} = usuario;
+console.log(nombre); //"Lucas"
+console.log(edad); //"27"
+
+//en arrays 
+
+const colores = ["rojo", "verde", "amarillo", "azul"]; 
+
+// Extraemos los primeros dos elementos
+const [primero, segundo] = colores;
+
+console.log(primero); // "rojo"
+console.log(segundo); // "verde"
+
+//truco: Usa comas para ignorar valores.
+
+const [uno, , dos] = colores; 
+console.log(uno) //"rojo"
+console.log(dos) //"amarillo"
+
+//-----------------------Operadores -------------------
+
+//---------operador ternario ------------
+
+//el operacion ternario es igual que el if ("?"), else (":")
+
+let numero = 9
+
+//forma tradicional 
+
+if (numero >= 18) {
+    console.log("es mayor de edad")
+}
+else {
+    console.log("es menor de edad")
+}; 
+
+//Con operador ternario 
+
+(numero >= 18) ? console.log("es mayor de edad") //se usa ? para el caso de exito
+               : console.log("es menor de edad") //se usa : para el caso de false 
+
+//operador ternario anidado y bloque de codigo
+
+let nota = 93;
+
+resultado = nota >= 90 ? (console.log("A"), console.log("supera las expectativas")) //en vez de hacer un bloque de codigo con {}, se hace con ()
+          : nota >= 80 ? console.log("B") 
+          : "C";
+
+// -------- operador spread ---------
+
+//es el operador del parametro spread 
+//lo que hace es deconstruir un array 
+
+//si se tiene: 
+
+let valor1 = "valor1"
+let valor2 = "valor2"
+let valor3 = "valor3"
+
+// y se hace: 
+
+console.log(valor1, valor2, valor3); //salida -> "valor 1 valor 2 valor 3"
+
+//para tener la misma salida con los valores estando en un array, se hace lo siguiente: 
+
+let arr = [valor1, valor2, valor3]; 
+
+console.log(...arr); //salida -> "valor 1 valor 2 valor 3"
+//se hace una destructuracion de todos los elementos del array
+
+
+
+//tambien el operador spread se utiliza para añadir arrays a otros arrays 
+
+arr = ["manzana", "pera", "cambur"]; 
+let arr2 = ["durazno", "parchita"]; 
+
+//como puedo colocar el array 2 en el array 1?
+//si se unen los arrays de este modo:
+
+arr.push(arr2)
+console.log(arr) //Salida -> ["manzana", "pera", "cambur", Array]
+
+arr.splice(3, 1); //eliminamos el array de arr para tenerlo como estaba antes 
+
+//se puede hacer tambien lo siguiente 
+
+for (let fruta of arr2) {
+    arr.push(fruta)
+}; 
+console.log(arr); //Salida -> ["manzana", "pera", "cambur", "durazno", "parchita"]
+
+arr.splice(3, 2); //eliminamos las frutas agregadas para tener el array original 
+
+//no obstante, la forma mas practica de hacerlo es: 
+
+arr.push(...arr2);
+console.log(arr) //Salida -> ["manzana", "pera", "cambur", "durazno", "parchita"]
+
+arr.splice(3, 2); //eliminamos las frutas agregadas para tener el array original 
+
+//tambien se pueden concatenar arrays
+//para concatenar dos arrays sin tener que modificar uno de ellos sino teniendo un valor nuevo, se have lo siguiente: 
+
+let arr3 = [...arr, ...arr2];
+console.log(arr3); //Salida -> ["manzana", "pera", "cambur", "durazno", "parchita"]
+//arr3 es un elemento completamente diferente 
+
+
+//tambien podemos destruccturar un array para pasarlo como parametros a una funcion 
+
+const funcion = (num1, num2) => {
+    console.log(num1 + num2)
+}; 
+
+let nums = [6, 2]; //para los elementos por separado de este array como parametros, se usa el operador spread: 
+
+funcion(...nums); //el operador spread descompone el array y pasa los elementos por separado. Es lo mismo que hacer: 
+funcion(nums[0], nums[1])
+
+

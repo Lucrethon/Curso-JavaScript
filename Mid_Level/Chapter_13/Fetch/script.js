@@ -114,4 +114,4 @@ fetch("Hollow_Pygame.png")
 
 // _ formData()
 
-// _ arrayBuffer()
+// _ array
